@@ -1,5 +1,5 @@
 <?php
-    include "../../Controller/SessionController.php";
+include "../../Controller/SessionController.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,39 +30,36 @@
 
 
 		<div class="jumbotron">
-			<?php if (isset($_GET['erro'])) {  
-				$erro = $_GET['erro'];
-				?>
-				<div class="alert alert-danger">
-					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>Erro!</strong> <?= $erro ?>
-				</div>
-				<?php } ?>
-				<?php if (isset($sucesso)) { ?>
-				<div class="alert alert-success">
-					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>Sucesso!</strong> <?= $sucesso ?>
-				</div>
-				<?php } ?>
+			<?php if (isset($_GET['erro'])) {  $erro = $_GET['erro']; ?>
+			<div class="alert alert-danger">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>Erro!</strong> <?= $erro ?>
+			</div>
+			<?php } ?>
+			<?php if (isset($sucesso)) { ?>
+			<div class="alert alert-success">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>Sucesso!</strong> <?= $sucesso ?>
+			</div>
+			<?php } ?>
 
 
-				<form action="../../Controller/ProductController.php" method="post" name="cadProduct">
-					<div class="row">
-						<div class="form-group col-md-4">
-							<label for="">Descrição</label>
-							<input type="text" name="textDescricao" class="form-control" id="textNomeCompleto" placeholder="Descrição">
+			<form action="../../Controller/ProductController.php" method="post" name="cadProduct">
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="">Descrição</label>
+						<input type="text" name="textDescricao" class="form-control" id="textNomeCompleto" placeholder="Descrição">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="">Código de Referência</label>
+						<div class="date" data-provide="">
+							<input type="text" name="textCodReferencia" id="" class="form-control" placeholder="Código de referência">
 						</div>
-						<div class="form-group col-md-4">
-							<label for="">Código de Referência</label>
-							<div class="date" data-provide="">
-								<input type="text" name="textCodReferencia" id="" class="form-control" placeholder="Código de referência">
-							</div>
-						</div>
+					</div>
 
-						<div class="form-group col-md-4">
-							<label for="exampleInputEmail1">Marca</label>
-							<input type="text" name="textMarca" class="form-control" id="" placeholder="Marca">
-						</div>
+					<div class="form-group col-md-4">
+						<label for="exampleInputEmail1">Marca</label>
+						<input type="text" name="textMarca" class="form-control" id="" placeholder="Marca">
 					</div>
 				</div>
 
