@@ -15,8 +15,10 @@
 			</div>
 			<?php } ?>
 			<?php 
-			if (isset($_GET['product'])) {
-				echo '<br>Produto: '.$_GET['product'];
+			if (isset($_GET['descricao']) && isset($_GET['cod_referencia']) && isset($_GET['marca'])) {
+				echo '<br>Produto: '.$_GET['descricao'].
+				'<br>Código: '.$_GET['cod_referencia'].
+				'<br>Marca: '.$_GET['marca'];
 			}
 			?>
 		</div>

@@ -15,7 +15,9 @@ if ( (!empty($_POST['textDescricao'])) &&
 
 	$sucesso = "Produto $product->descricao criado com sucesso!";
 	header("location:../View/products/ProductViewResult.php?".
-		"product=$product->descricao");
+		"descricao=$product->descricao&".
+		"cod_referencia=$product->cod_referencia&".
+		"marca=$product->marca");
 
 }else{
 

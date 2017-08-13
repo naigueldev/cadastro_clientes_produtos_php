@@ -1,3 +1,6 @@
+<?php
+    include "../../Controller/SessionController.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>

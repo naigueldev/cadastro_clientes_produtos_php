@@ -1,3 +1,6 @@
+<?php
+    include "../../Controller/SessionController.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +8,9 @@
 		Cadastro Clientes
 	</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="../../assets/stylesheets/bootstrap-datepicker.css">
+	<?php
+	include "../../assets/stylesheets/css_include.php";
+	?>
 
 	<style type="text/css">
 

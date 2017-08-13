@@ -7,16 +7,10 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Resultado</h1>
-
-			<?php if (isset($sucesso)) { ?>
-			<div class="alert alert-success">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<strong>Sucesso!</strong> <?= $sucesso ?>
-			</div>
-			<?php } ?>
 			<?php 
 			if (isset($_GET['customer']) && isset($_GET['sexo'])) {
-				echo '<br>Cliente: '.$_GET['customer'].'<br>Sexo: '.$_GET['sexo'];
+				echo '<br>Cliente: '.$_GET['customer'].
+				'<br>Sexo: '.$_GET['sexo'];
 			}
 			?>
 		</div>

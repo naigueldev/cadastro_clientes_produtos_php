@@ -12,6 +12,11 @@
 				<li id="link-product"><a href="../products/ProductView.php">Produtos</a></li>
 				
 			</ul>
+			<ul class="nav navbar-nav" id="ul-menu" style="float: right;">
+				<li>
+					<a href="../../Controller/LoginController.php?acao=sair"> <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+				</li>
+			</ul>
 			<!-- <form class="navbar-form navbar-left">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
