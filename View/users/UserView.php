@@ -1,22 +1,10 @@
-<?php 
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-	Cadastro Clientes
-	</title>
+	<title>Cadastro Usuários</title>
 
-	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-	<!-- Latest compiled and minified JavaScript -->
-	
 
 	<style type="text/css">
 
@@ -28,7 +16,7 @@
 </head>
 <body>
 
-	<?php include "topo/menu.php" ?>
+	<?php include "../topo/menu.php" ?>
 
 
 	<div class="container ">
@@ -78,10 +66,10 @@
 					<input type="password" name="pwdSenha" class="form-control" id="pwdSenha" placeholder="Password">
 				</div>
 				<div class="text-center">
-					
+
 					<input type="submit" name="btCadastrar" id="btCadastrar" class="btn btn-md btn-success" value="Cadastrar" />
 					<input type="reset" name="btLimpar" id="btbtLimparCadastrar" class="btn btn-md btn-default" value="Limpar" />
-					
+
 				</div>
 			</form>
 		</div>

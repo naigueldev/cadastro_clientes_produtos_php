@@ -29,13 +29,13 @@ if ( (!empty($_POST['textUser'])) &&
 
 
 		$sucesso = "Usuário $user->user criado com sucesso!";
-		header("location:../View/UserViewResult.php?".
+		header("location:../View/users/UserViewResult.php?".
 			"user=$user->user&".
 			"mail=$user->email");
 			// require '../View/UserView.php';
 	}else{
 		$err = serialize($erros);
-		header("location:../View/UserViewError.php?".
+		header("location:../View/users/UserViewError.php?".
 			"erros=$err");
 
 

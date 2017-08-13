@@ -2,14 +2,14 @@
 	<div class="container">
 		<div class="navbar-header">
 			<!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
-			<a class="navbar-brand" href="#">Project name</a>
+			<a class="navbar-brand" href="#">Naiguel's PHP Project</a>
 		</div>
 		<!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
 		<div id="navbar">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
+			<ul class="nav navbar-nav" id="ul-menu">
+				<li id="link-user" class="active"><a href="../users/UserView.php">Usuários</a></li>
+				<li id="link-customer"><a href="../customers/CustomerView.php">Clientes</a></li>
+				<li><a href="#contact">Produtos</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 					<ul class="dropdown-menu">
