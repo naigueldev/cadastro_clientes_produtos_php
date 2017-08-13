@@ -1,11 +1,9 @@
 
 $(document).ready(function () {
-	$('.datepicker-two').datepicker({
+	$('.datepicker').datepicker({
 		format: 'dd/mm/yyyy',                
 		language: 'pt-BR'
 	});
-
-	
 
 });
 $(document).ready(function () {
@@ -17,6 +15,10 @@ $(document).ready(function () {
 	if(window.location.href.indexOf("user") > -1) {
 		$('#ul-menu li').removeClass("active");
 		$('#link-user').addClass("active");
+	}
+	if(window.location.href.indexOf("product") > -1) {
+		$('#ul-menu li').removeClass("active");
+		$('#link-product').addClass("active");
 	}
 
 });

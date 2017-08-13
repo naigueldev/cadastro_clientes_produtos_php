@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +7,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="../../assets/stylesheets/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../../assets/stylesheets/datepicker.css">
 
 	<style type="text/css">
 
@@ -56,7 +52,7 @@
 					<div class="form-group col-md-4">
 						<label for="">Data de Nascimento</label>
 						<div class="date" data-provide="">
-							<input type="text" name="textDataNascimento" id="textDataNascimento" class="datepicker-two form-control" placeholder="dd/mm/aaaa">
+							<input type="text" name="textDataNascimento" id="textDataNascimento" class="datepicker form-control" placeholder="dd/mm/aaaa">
 						</div>
 					</div>
 
@@ -71,7 +67,7 @@
 						<label for="exampleFormControlSelect1">Sexo</label>
 						<select class="form-control" name="textSexo" id="exampleFormControlSelect1">
 							<option>Masculino</option>
-							<option>Feminono</option>
+							<option>Feminino</option>
 							<option>Indefinido</option>
 						</select>
 					</div>
@@ -157,12 +153,8 @@
 		</div>
 	</div>
 
+	<?php include "../../assets/javascripts/js_include.php" ?>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="../../assets/javascripts/bootstrap-datepicker.js"></script>
-	<script src="../../assets/javascripts/bootstrap-datepicker.pt-BR.js"></script>
-	<script src="../../assets/javascripts/application.js"></script>
 
 
 </body>

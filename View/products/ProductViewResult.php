@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cadastrp de Usuário efetuado</title>
+	<title>Cadastrp de Produto efetuado</title>
 </head>
 <body>
 	<div class="container">
@@ -15,8 +15,8 @@
 			</div>
 			<?php } ?>
 			<?php 
-			if (isset($_GET['customer']) && isset($_GET['sexo'])) {
-				echo '<br>Cliente: '.$_GET['customer'].'<br>Sexo: '.$_GET['sexo'];
+			if (isset($_GET['product'])) {
+				echo '<br>Produto: '.$_GET['product'];
 			}
 			?>
 		</div>

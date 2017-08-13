@@ -22,6 +22,7 @@ if ( (!empty($_POST['textNomeCompleto'])) &&
 		$customer->nome_completo = $_POST['textNomeCompleto'];
 		$customer->nascimento = $_POST['textDataNascimento'];
 		$customer->cpf = $_POST['textCpf'];
+		$customer->sexo = $_POST['textSexo'];
 		$customer->profissao = $_POST['textProfissao'];
 		$customer->telefone = $_POST['textTelefone'];
 		$customer->celular = $_POST['textCelular'];
@@ -38,7 +39,7 @@ if ( (!empty($_POST['textNomeCompleto'])) &&
 
 		$sucesso = "Cliente $customer->nome_completo criado com sucesso!";
 		header("location:../View/customers/CustomerViewResult.php?".
-			"customer=$customer->nome_completo");
+			"customer=$customer->nome_completo&sexo=$customer->sexo");
 	}else{
 		$err = serialize($erros);
 		header("location:../View/customers/CustomerViewError.php?".

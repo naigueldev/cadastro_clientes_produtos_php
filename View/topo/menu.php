@@ -9,31 +9,15 @@
 			<ul class="nav navbar-nav" id="ul-menu">
 				<li id="link-user" class="active"><a href="../users/UserView.php">Usuários</a></li>
 				<li id="link-customer"><a href="../customers/CustomerView.php">Clientes</a></li>
-				<li><a href="#contact">Produtos</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li class="dropdown-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
-				</li>
+				<li id="link-product"><a href="../products/ProductView.php">Produtos</a></li>
+				
 			</ul>
-			<form class="navbar-form navbar-left">
+			<!-- <form class="navbar-form navbar-left">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
+			</form> -->
 		</div><!--/.nav-collapse -->
 	</div>
 </nav>
