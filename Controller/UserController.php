@@ -44,7 +44,9 @@ if ( (!empty($_POST['textUser'])) &&
 }else{
 
 	$erro = "Informe todos os campos!";
-	require '../View/UserView.php';
+	header("location:../View/users/UserView.php?".
+			"erro=$erro");
+	// require '../View/users/UserView.php';
 
 }
 ?>

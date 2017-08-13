@@ -24,12 +24,14 @@
 
 
 		<div class="jumbotron">
-		<?php if (isset($erro)) { ?>
-		<div class="alert alert-danger">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<strong>Erro!</strong> <?= $erro ?>
-		</div>
-		<?php } ?>
+		<?php if (isset($_GET['erro'])) {  
+				$erro = $_GET['erro'];
+				?>
+			<div class="alert alert-danger">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>Erro!</strong> <?= $erro ?>
+			</div>
+			<?php } ?>
 		<?php if (isset($sucesso)) { ?>
 		<div class="alert alert-success">
 			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -38,7 +40,7 @@
 		<?php } ?>
 
 
-			<form action="../Controller/UserController.php" method="post" name="cadUser">
+			<form action="../../Controller/UserController.php" method="post" name="cadUser">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Usuário</label>
 					<input type="text" name="textUser" class="form-control" id="textUser" placeholder="Usuário">
