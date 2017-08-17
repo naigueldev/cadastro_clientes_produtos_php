@@ -1,3 +1,14 @@
+<?php 
+	session_start();
+	if(isset($_SESSION['user']) && isset($_SESSION['mail'])){
+		echo "<br>Usuário = ".$_SESSION['user']."<br>".
+			"E-mail = ".$_SESSION['email'];
+		
+		unset($_SESSION['user']);
+		unset($_SESSION['email']);
+	}
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>

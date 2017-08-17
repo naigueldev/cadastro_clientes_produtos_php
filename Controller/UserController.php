@@ -1,4 +1,15 @@
 <?php 
+
+session_start();
+require '../db/conexao.php';
+
+if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
+	unset($_SESSION['logado']);
+	header('location: ../View/login/login.php?logout=1');
+}else
+	$acao = $_GET['acao'];
+
+	
 include '../Model/UserModel.php';
 include '../Include/UserValidate.php';
 
@@ -29,12 +40,13 @@ if ( (!empty($_POST['textUser'])) &&
 
 
 		$sucesso = "Usuário $user->user criado com sucesso!";
-		header("location:../View/users/UserViewResult.php?".
-			"user=$user->user&".
-			"mail=$user->email");
+		$_SESSION['user'] = $user->user;
+		$_SESSION['mail'] = $user->email;
+		header("location:../View/users/UserViewResult.php?");
 			// require '../View/UserView.php';
 	}else{
 		$err = serialize($erros);
+		$_SESSION['erros'] = $err;
 		header("location:../View/users/UserViewError.php?".
 			"erros=$err");
 

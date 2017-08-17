@@ -1,4 +1,15 @@
 <?php 
+
+session_start();
+require '../db/conexao.php';
+
+if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
+	unset($_SESSION['logado']);
+	header('location: ../View/login/login.php?logout=1');
+}else
+	$acao = $_GET['acao'];
+
+	
 include '../Model/CustomerModel.php';
 include '../Include/CustomerValidate.php';
 
