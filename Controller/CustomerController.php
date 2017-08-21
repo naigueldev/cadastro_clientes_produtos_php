@@ -1,4 +1,17 @@
 <?php 
+
+session_start();
+// require '../db/conexao.php';
+require '../Dao/CustomerDAO.php';
+include '../Model/CustomerModel.php';
+
+if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
+	unset($_SESSION['logado']);
+	header('location: ../View/login/login.php?logout=1');
+}else
+	// $acao = $_GET['acao'];
+
+	
 include '../Model/CustomerModel.php';
 include '../Include/CustomerValidate.php';
 
@@ -36,10 +49,32 @@ if ( (!empty($_POST['textNomeCompleto'])) &&
 		$customer->estado = $_POST['textEstado'];
 		$customer->observacao = $_POST['textObservacao'];
 
+		$customerDao = new CustomerDAO();
+		$customerDao->insertCustomer($customer);
+
 
 		$sucesso = "Cliente $customer->nome_completo criado com sucesso!";
-		header("location:../View/customers/CustomerViewResult.php?".
-			"customer=$customer->nome_completo&sexo=$customer->sexo");
+
+		$_SESSION['nome_completo'] = $customer->nome_completo;
+		$_SESSION['nascimento'] = $customer->nascimento;
+		$_SESSION['cpf'] = $customer->cpf;
+		$_SESSION['sexo'] = $customer->sexo;
+		$_SESSION['profissao'] = $customer->profissao;
+		$_SESSION['telefone'] = $customer->telefone;
+		$_SESSION['celular'] = $customer->celular;
+		$_SESSION['email'] = $customer->email;
+		$_SESSION['cep'] = $customer->cep;
+		$_SESSION['endereco'] = $customer->endereco;
+		$_SESSION['numero'] = $customer->numero;
+		$_SESSION['complemento'] = $customer->complemento;
+		$_SESSION['bairro'] = $customer->bairro;
+		$_SESSION['cidade'] = $customer->cidade;
+		$_SESSION['estado'] = $customer->estado;
+		$_SESSION['observacao'] = $customer->observacao;
+
+
+		
+		header("location:../View/customers/CustomerViewResult.php");
 	}else{
 		$err = serialize($erros);
 		header("location:../View/customers/CustomerViewError.php?".

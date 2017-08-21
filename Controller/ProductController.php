@@ -1,5 +1,17 @@
 <?php 
+
+session_start();
+// require '../db/conexao.php';
 include '../Model/ProductModel.php';
+require '../Dao/ProductDAO.php';
+
+if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
+	unset($_SESSION['logado']);
+	header('location: ../View/login/login.php?logout=1');
+}else
+	// $acao = $_GET['acao'];
+
+	
 
 if ( (!empty($_POST['textDescricao'])) &&
 	(!empty($_POST['textCodReferencia'])) &&
@@ -12,12 +24,17 @@ if ( (!empty($_POST['textDescricao'])) &&
 	$product->cod_referencia = $_POST['textCodReferencia'];
 	$product->marca = $_POST['textMarca'];
 
+	$productDao = new ProductDAO();
+	$productDao->insertProduct($product);
 
 	$sucesso = "Produto $product->descricao criado com sucesso!";
-	header("location:../View/products/ProductViewResult.php?".
-		"descricao=$product->descricao&".
-		"cod_referencia=$product->cod_referencia&".
-		"marca=$product->marca");
+
+	$_SESSION['descricao'] = $product->descricao;
+	$_SESSION['cod_referencia'] = $product->cod_referencia;
+	$_SESSION['marca'] = $product->marca;
+
+
+	header("location:../View/products/ProductViewResult.php");
 
 }else{
 

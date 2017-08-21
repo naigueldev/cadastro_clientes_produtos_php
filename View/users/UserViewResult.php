@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+	if(isset($_SESSION['user']) && isset($_SESSION['email'])){
+		echo "<br>Usuário = ".$_SESSION['user']."<br>E-mail = ".$_SESSION['user'];
+		
+		unset($_SESSION['user']);
+		unset($_SESSION['email']);
+	}
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,9 +25,9 @@
 			</div>
 			<?php } ?>
 			<?php 
-			if (isset($_GET['user']) && isset($_GET['mail'])) {
-				echo '<br>Usuário: '.$_GET['user'].
-				'<br>E-mail: '.$_GET['mail'];
+			if (isset($_SESSION['user']) && isset($_SESSION['email'])) {
+				echo '<br>Usuário: '.$_SESSION['user'].
+				'<br>E-mail: '.$_SESSION['email'];
 			}
 			?>
 		</div>

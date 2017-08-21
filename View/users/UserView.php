@@ -1,5 +1,5 @@
 <?php
-include "../../Controller/SessionController.php";
+// include "../../Controller/SessionController.php";
 ?>
 
 <!DOCTYPE html>
