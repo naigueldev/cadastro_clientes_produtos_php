@@ -4,6 +4,7 @@ session_start();
 // require '../db/conexao.php';
 require '../Dao/CustomerDAO.php';
 include '../Model/CustomerModel.php';
+include '../Include/CustomerValidate.php';
 
 if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
 	unset($_SESSION['logado']);
@@ -12,8 +13,6 @@ if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
 	// $acao = $_GET['acao'];
 
 	
-include '../Model/CustomerModel.php';
-include '../Include/CustomerValidate.php';
 
 
 if ( (!empty($_POST['textNomeCompleto'])) &&

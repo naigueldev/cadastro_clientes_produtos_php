@@ -132,7 +132,10 @@
 				<div class="row">
 					<div class="form-group col-md-12">
 						<label for="exampleFormControlTextarea1">Observação</label>
-						<textarea class="form-control" name="textObservacao" id="exampleFormControlTextarea1" rows="3" value="<?php echo $_SESSION['observacao'] ?>" readonly="true" style="overflow: auto; resize: vertical;"></textarea>
+						<textarea class="form-control" name="textObservacao" id="exampleFormControlTextarea1" rows="3" value="" readonly="true" style="overflow: auto; resize: vertical;">
+							
+							<?php echo $_SESSION['observacao']; ?>
+						</textarea>
 					</div>
 				</div>
 
@@ -159,7 +162,7 @@ if(isset($_SESSION['nome_completo']) &&
 	isset($_SESSION['cidade']) &&
 	isset($_SESSION['estado']) &&
 	isset($_SESSION['observacao'])){
-	
+
 
 	unset($_SESSION['nome_completo']);
 	unset($_SESSION['nascimento']);
