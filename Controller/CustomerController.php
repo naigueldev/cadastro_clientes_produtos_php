@@ -1,8 +1,20 @@
 <?php 
 
 session_start();
+<<<<<<< HEAD
 // require '../db/conexao.php';
 require '../Dao/CustomerDAO.php';
+=======
+require '../db/conexao.php';
+
+if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
+	unset($_SESSION['logado']);
+	header('location: ../View/login/login.php?logout=1');
+}else
+	$acao = $_GET['acao'];
+
+	
+>>>>>>> faaa7c64fd8eb74f1cdea35217d694aff02bd16e
 include '../Model/CustomerModel.php';
 include '../Include/CustomerValidate.php';
 

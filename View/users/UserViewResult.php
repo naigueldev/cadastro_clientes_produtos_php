@@ -1,7 +1,13 @@
 <?php 
 	session_start();
+<<<<<<< HEAD
 	if(isset($_SESSION['user']) && isset($_SESSION['email'])){
 		echo "<br>Usuário = ".$_SESSION['user']."<br>E-mail = ".$_SESSION['user'];
+=======
+	if(isset($_SESSION['user']) && isset($_SESSION['mail'])){
+		echo "<br>Usuário = ".$_SESSION['user']."<br>".
+			"E-mail = ".$_SESSION['email'];
+>>>>>>> faaa7c64fd8eb74f1cdea35217d694aff02bd16e
 		
 		unset($_SESSION['user']);
 		unset($_SESSION['email']);
