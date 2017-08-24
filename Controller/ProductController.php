@@ -1,9 +1,7 @@
 <?php 
 
 session_start();
-<<<<<<< HEAD
 // require '../db/conexao.php';
-=======
 require '../db/conexao.php';
 
 if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
@@ -13,7 +11,6 @@ if(isset($_GET['acao']) && $_GET['acao'] == 'sair'){
 	$acao = $_GET['acao'];
 
 	
->>>>>>> faaa7c64fd8eb74f1cdea35217d694aff02bd16e
 include '../Model/ProductModel.php';
 require '../Dao/ProductDAO.php';
 
